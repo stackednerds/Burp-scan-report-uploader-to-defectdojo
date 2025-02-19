@@ -7,4 +7,4 @@ services:
     volumes:
       - ./burp_report.xml:/app/burp_report.xml:ro
     restart: "no"  # Prevents container from restarting
-    command: ["/app/upload_burp.sh"]
+    command: ["/app/burp_upload.sh"]
