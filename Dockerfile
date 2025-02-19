@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 # Install curl (required for API requests)
-RUN apk add --no-cache curl
+RUN apk add --no-cache curl bash
 
 WORKDIR /app
 
