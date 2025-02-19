@@ -14,25 +14,24 @@ This project provides a streamlined method to upload Burp Suite scan reports int
    ```bash
    git clone https://github.com/stackednerds/Burp-scan-report-uploader-to-defectdojo.git
    cd Burp-scan-report-uploader-to-defectdojo
-
-2. Create the .env File
-You need to create a .env file in the root directory of the project.
-
-bash
-Copy
-Edit
-touch .env
+2. **Create the .env file:**
 Edit the .env file and add the following environment variables:
+   ```bash
+   touch .env
+   
+   DEFECTDOJO_URL="https://your-defectdojo-instance.com"
+   DD_API_KEY="your-api-key"
+   ENGAGEMENT_ID="your-engagement-id"
+   BURP_REPORT="path/to/burp_report.xml"
+- DEFECTDOJO_URL: The URL of your DefectDojo instance.
+- DD_API_KEY: API key for authentication.
+- ENGAGEMENT_ID: The engagement ID in DefectDojo where the report will be uploaded.
+- BURP_REPORT: The absolute or relative path to your Burp Suite scan report (XML format).
 
-env
-Copy
-Edit
-DEFECTDOJO_URL="https://your-defectdojo-instance.com"
-DD_API_KEY="your-api-key"
-ENGAGEMENT_ID="your-engagement-id"
-BURP_REPORT="path/to/burp_report.xml"
-DEFECTDOJO_URL: The URL of your DefectDojo instance.
-DD_API_KEY: API key for authentication.
-ENGAGEMENT_ID: The engagement ID in DefectDojo where the report will be uploaded.
-BURP_REPORT: The absolute or relative path to your Burp Suite scan report (XML format).
-Make sure your Burp scan report exists at the specified path before proceeding.
+ Make sure your Burp scan report exists at the specified path before proceeding.
+ 
+ 3. **Build and Run the Docker Image:**
+
+   ```bash
+   docker compose build --no-cache
+   docker compose up
