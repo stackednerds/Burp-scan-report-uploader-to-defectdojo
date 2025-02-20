@@ -1,5 +1,5 @@
 #!/bin/bash
-
+BURP_REPORT="/app/burp_report.xml"
 # Ensure required variables are set
 if [[ -z "$DEFECTDOJO_URL" || -z "$DD_API_KEY" || -z "$ENGAGEMENT_ID" || -z "$BURP_REPORT" ]]; then
   echo "Error: Missing required environment variables."
