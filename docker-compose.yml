@@ -5,6 +5,6 @@ services:
     env_file:
       - .env
     volumes:
-      - ./burp_report.xml:/app/burp_report.xml:ro
+      - ./$BURP_REPORT:/app/burp_report.xml:ro
     restart: "no"  # Prevents container from restarting
     command: ["/app/burp_uploader.sh"]
